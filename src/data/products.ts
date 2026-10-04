@@ -1,0 +1,185 @@
+import type { Product } from '@/types'
+import { furnitureImage, photos } from '@/data/images'
+
+const img = (photo: string) => furnitureImage(photo, 1200)
+
+export const products: Product[] = [
+  {
+    id: 'sf-001',
+    slug: 'azure-comfort-l-shape',
+    name: 'Azure Comfort L-Shape Sofa',
+    category: 'sofas',
+    subType: 'L-Shape',
+    price: 45999,
+    mrp: 62999,
+    description:
+      'Premium fabric L-shape sofa with quilted side panels. Modern design perfect for living rooms with spacious seating.',
+    highlights: [
+      'Stylish Design',
+      'Strong & Durable',
+      'Premium Quality Fabric',
+      'Comfortable Seating',
+    ],
+    image: img(photos.sofa),
+    images: [img(photos.sofa), img(photos.sofaSet)],
+    featured: true,
+    tags: ['bestseller', 'living-room'],
+    dimensions: '280 × 180 × 85 cm',
+    material: 'Premium fabric, solid wood frame',
+  },
+  {
+    id: 'sf-002',
+    slug: 'classic-3-plus-2-set',
+    name: 'Classic 3+2 Sofa Set',
+    category: 'sofas',
+    subType: '3+2',
+    price: 32999,
+    mrp: 44999,
+    description: 'Elegant 3-seater and 2-seater combo with high-density foam and stain-resistant upholstery.',
+    highlights: ['Modern & Elegant', 'Easy maintenance', 'Best Price Guarantee'],
+    image: img(photos.sofaSet),
+    images: [img(photos.sofaSet)],
+    tags: ['family'],
+    dimensions: '210 + 160 cm',
+    material: 'Microfiber, engineered wood',
+  },
+  {
+    id: 'sf-003',
+    slug: 'royal-recliner-3-seater',
+    name: 'Royal Recliner 3-Seater',
+    category: 'sofas',
+    subType: 'Recliner',
+    price: 54999,
+    mrp: 74999,
+    description: 'Power recliner with USB charging and premium leatherette finish.',
+    highlights: ['Reclining comfort', 'USB ports', 'Premium finish'],
+    image: img(photos.living),
+    images: [img(photos.living)],
+    tags: ['premium'],
+    dimensions: '220 × 95 × 100 cm',
+  },
+  {
+    id: 'ct-001',
+    slug: 'heritage-king-storage-bed',
+    name: 'Heritage King Storage Bed',
+    category: 'cots',
+    subType: 'Storage',
+    price: 38999,
+    mrp: 52000,
+    description: 'Solid sheesham wood king bed with hydraulic storage and headboard shelf.',
+    highlights: ['Hydraulic storage', 'Solid wood', '10-year frame warranty'],
+    image: img(photos.bed),
+    images: [img(photos.bed)],
+    featured: true,
+    tags: ['bedroom'],
+    dimensions: 'King 198 × 183 cm',
+    material: 'Sheesham wood',
+  },
+  {
+    id: 'dn-001',
+    slug: 'marble-top-6-seater',
+    name: 'Marble Top 6-Seater Dining',
+    category: 'dining',
+    subType: '6 Seater',
+    price: 42999,
+    mrp: 58000,
+    description: 'Italian marble top with solid rubberwood legs and cushioned chairs.',
+    highlights: ['Marble top', 'Scratch resistant', 'Free installation'],
+    image: img(photos.dining),
+    images: [img(photos.dining)],
+    tags: ['dining'],
+    dimensions: 'Table 180 × 90 cm',
+  },
+  {
+    id: 'wd-001',
+    slug: 'slide-pro-3-door',
+    name: 'SlidePro 3-Door Wardrobe',
+    category: 'wardrobes',
+    subType: 'Sliding',
+    price: 35999,
+    mrp: 48000,
+    description: 'Full-height sliding wardrobe with mirror panel and internal organizers.',
+    highlights: ['Soft-close sliders', 'Mirror panel', 'Modular interiors'],
+    image: img(photos.wardrobe),
+    images: [img(photos.wardrobe)],
+    tags: ['bedroom'],
+    dimensions: '240 × 60 × 210 cm',
+  },
+  {
+    id: 'mt-001',
+    slug: 'ortho-rest-plus',
+    name: 'OrthoRest Plus Mattress',
+    category: 'mattresses',
+    subType: 'Orthopedic',
+    price: 18999,
+    mrp: 26000,
+    description: 'Doctor-recommended orthopedic support with breathable fabric cover.',
+    highlights: ['Spine support', '10-year warranty', 'Hypoallergenic'],
+    image: img(photos.mattress),
+    images: [img(photos.mattress)],
+    tags: ['health'],
+    dimensions: 'Queen 198 × 152 × 20 cm',
+  },
+  {
+    id: 'of-001',
+    slug: 'ergo-pro-office-chair',
+    name: 'ErgoPro Executive Chair',
+    category: 'office',
+    subType: 'Chairs',
+    price: 12999,
+    mrp: 18000,
+    description: 'Adjustable lumbar support, mesh back, and smooth-rolling casters.',
+    highlights: ['Ergonomic', 'Adjustable armrests', 'BIFMA tested'],
+    image: img(photos.office),
+    images: [img(photos.office)],
+    tags: ['office'],
+  },
+  {
+    id: 'hd-001',
+    slug: 'divine-pooja-unit',
+    name: 'Divine Pooja Unit',
+    category: 'home-decor',
+    subType: 'Pooja Units',
+    price: 14999,
+    mrp: 21000,
+    description: 'Compact temple unit with drawer storage and ambient LED option.',
+    highlights: ['Custom sizes', 'LED option', 'Premium laminate'],
+    image: img(photos.decor),
+    images: [img(photos.decor)],
+    tags: ['spiritual'],
+  },
+  {
+    id: 'ac-001',
+    slug: 'luxury-throw-cushion-set',
+    name: 'Luxury Throw Cushion Set (5)',
+    category: 'accessories',
+    subType: 'Cushions',
+    price: 2499,
+    mrp: 3999,
+    description: 'Velvet finish cushions with premium inserts — mix & match colors.',
+    highlights: ['Premium velvet', 'Mix & match', 'Easy wash covers'],
+    image: img(photos.accessories),
+    images: [img(photos.accessories)],
+    tags: ['decor'],
+  },
+]
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug)
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((p) => p.category === category)
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.filter((p) => p.featured)
+}
+
+export function formatPrice(amount: number): string {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(amount)
+}

@@ -1,0 +1,126 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Pacifico', cursive;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-brand-950: #0c0c0c;
+  --color-brand-900: #1a1a1a;
+  --color-brand-800: #2e2e2e;
+  --color-brand-700: #454545;
+  --color-brand-600: #5c5c5c;
+  --color-brand-500: #787878;
+  --color-brand-400: #a1a1a1;
+  --color-brand-300: #d1d1d1;
+  --color-brand-100: #f4f4f5;
+  --color-brand-50: #fafafa;
+
+  --color-accent: #d97706;
+  --color-accent-hover: #b45309;
+  --color-accent-soft: #fff7ed;
+  --color-accent-red: #e11d48;
+  --color-accent-gold: #b8860b;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8f8f8;
+  --color-muted: #71717a;
+  --color-border: #e4e4e7;
+
+  --radius-premium: 1rem;
+  --shadow-premium: 0 4px 24px -4px rgb(0 0 0 / 0.08), 0 2px 8px -2px rgb(0 0 0 / 0.04);
+  --shadow-premium-lg: 0 20px 50px -20px rgb(0 0 0 / 0.15);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-surface font-sans text-brand-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-brand-950;
+  }
+}
+
+@layer utilities {
+  .ouch-container {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-5 md:px-8 lg:px-10;
+  }
+
+  .premium-link {
+    @apply inline-flex items-center gap-1 text-sm font-semibold text-accent transition hover:text-accent-hover;
+  }
+
+  .premium-card {
+    @apply overflow-hidden rounded-2xl border border-border/80 bg-white shadow-[var(--shadow-premium)] transition duration-300 hover:shadow-[var(--shadow-premium-lg)];
+  }
+
+  .premium-input {
+    @apply w-full rounded-xl border border-border bg-white px-4 py-3 text-base text-brand-900 outline-none transition placeholder:text-muted focus:border-accent focus:ring-2 focus:ring-accent/15 md:text-sm md:py-2.5;
+  }
+
+  .touch-target {
+    @apply inline-flex min-h-11 min-w-11 items-center justify-center;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .logo-sairam-rich {
+    font-weight: 700;
+    background: linear-gradient(
+      105deg,
+      #047857 0%,
+      #16a34a 22%,
+      #ca8a04 48%,
+      #dc2626 72%,
+      #15803d 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 rgb(0 0 0 / 0.06));
+    animation: logo-shimmer 8s ease-in-out infinite;
+  }
+
+  .logo-furnitures-rich {
+    background: linear-gradient(90deg, #b45309, #dc2626, #047857);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes logo-shimmer {
+    0%,
+    100% {
+      background-position: 0% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+  }
+}

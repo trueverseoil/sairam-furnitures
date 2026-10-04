@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#dcf5e4"/>
+  <rect x="80" y="420" width="640" height="24" rx="4" fill="#1a5630" opacity="0.15"/>
+  <path d="M160 380h480v40H160z" fill="#22703c" opacity="0.25"/>
+  <path d="M200 200h400v180H200z" rx="16" fill="#2d8f4e" opacity="0.35"/>
+  <text x="400" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" fill="#134024" opacity="0.6">Sairam Furnitures</text>
+</svg>
