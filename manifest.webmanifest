@@ -1,0 +1,17 @@
+{
+  "name": "Sairam Furnitures",
+  "short_name": "Sairam",
+  "description": "Quality furniture for a better home — Salem",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e85d04",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
